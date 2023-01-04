@@ -2,4 +2,23 @@
 layout: default
 title: Home
 ---
-<h1>{{ "Hello World!" | downcase }}</h1>
+<h1>Notes by Distracted Primate</h1>
+
+<p> 
+    Hello, my name is Distracted Primate and this is my personal website. 
+    I will try to keep my notes and updates about my career here.
+
+    I am a recent graduate of Univeristy of California - Santa Barbara, 
+    where I majored in Computer Science. I also was an Intern at Arista 
+    Networks
+</p>
+
+<h3>Latest Posts</h3>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    </li>
+  {% endfor %}
+</ul>
